@@ -74,7 +74,7 @@ class Binarytree
             return;
         }
     }
-};
+
 
 void search(int element, Node *&parent, Node *&currentNode)
 {
@@ -133,3 +133,10 @@ void postorder(Node *ptr)
     postorder(ptr->rightchild);
     cout << ptr->info << " ";
 }
+
+bool isEmpty()
+{
+    //Checks if the tree is empty
+    return ROOT == nullptr;
+}
+};

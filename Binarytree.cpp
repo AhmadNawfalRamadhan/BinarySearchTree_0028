@@ -52,7 +52,19 @@ class Binarytree
         if (parent == nullptr)
         {
             //5a : Mark the new node as ROOT
-            ROOT = newNode
+            ROOT = newNode;
+            //5b : Exit
+            return;
         }
+
+        // step 6: if the value in the data field of new node is less than that of parent
+        if (x < parent->info)
+        {
+            // 6a: Make the left child of parent point to thw new node
+            parent->leftchild = newNode;
+            // 6b : exit
+            return;
+        }
+        
     }
 };

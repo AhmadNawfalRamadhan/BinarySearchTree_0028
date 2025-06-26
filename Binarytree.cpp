@@ -76,7 +76,7 @@ class Binarytree
     }
 };
 
-void search (int element, Node *&parent, Node *&currentNode)
+void search(int element, Node *&parent, Node *&currentNode)
 {
     currentNode = ROOT;
     parent = nullptr;
@@ -88,4 +88,19 @@ void search (int element, Node *&parent, Node *&currentNode)
         else
             currentNode = currentNode->rightchild;
     }
+}
+
+void inorder(Node *ptr)
+{
+    if (isEmpty())
+    {
+        cout << "tree is empty" << endl;
+        return;
+    }
+    if (ptr == nullptr)
+        return;
+
+    inorder(ptr->leftchild);
+    cout << ptr->info << " "; //parent
+    inorder(ptr->rightchild);
 }
